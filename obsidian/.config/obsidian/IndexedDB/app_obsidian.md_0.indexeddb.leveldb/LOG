@@ -1,0 +1,9 @@
+2025/07/24-02:08:16.056 90d Reusing MANIFEST /home/danzo/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/24-02:08:16.057 90d Recovering log #7
+2025/07/24-02:08:16.066 90d Reusing old log /home/danzo/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000007.log 
+2025/07/24-02:08:17.435 90e Compacting 1@1 + 1@2 files
+2025/07/24-02:08:17.492 90e Generated table #10@1: 1011 keys, 568668 bytes
+2025/07/24-02:08:17.492 90e Compacted 1@1 + 1@2 files => 568668 bytes
+2025/07/24-02:08:17.494 90e compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/24-02:08:17.494 90e Delete type=2 #8
+2025/07/24-02:08:17.494 90e Delete type=2 #5

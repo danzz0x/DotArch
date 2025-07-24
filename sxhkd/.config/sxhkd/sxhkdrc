@@ -1,0 +1,86 @@
+# terminal emulator
+super + Return
+	alacritty
+
+# close focused window
+super + q
+	bspc node -{c,k}	
+
+#super + q
+#  	$HOME/Dotfiles/arch-bspwm/Scripts/rofi-kill-window.sh
+
+# refresh bspwm config
+super + w
+	$HOME/.config/bspwm/bspwmrc
+
+# refresh sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# take a screenshot
+super + s
+	flameshot gui
+
+# program launcher
+super + d
+	rofi -modi drun -show
+
+# start ranger file manager
+super + r
+	alacritty -e ranger
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,0}'
+
+# switch from full screen to tiled mode
+super + {t,f}
+	bspc node -t {tiled,fullscreen}
+
+# increase brightness
+super + equal
+   $HOME/.config/Scripts/increase_brightness.sh
+
+# decrese brightness
+super + minus
+   $HOME/.config/Scripts/decrease_brightness.sh
+# Aumentar brillo
+XF86MonBrightnessUp
+    $HOME/.config/Scripts/increase_brightness.sh
+
+# Disminuir brillo
+XF86MonBrightnessDown
+    $HOME/.config/Scripts/decrease_brightness.sh
+
+# Subir volumen con notificación
+
+XF86AudioRaiseVolume
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && notify-send \
+    "  " \
+    "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)"%"}')" \
+    -t 1000 \
+    -u normal
+
+
+# Bajar volumen con notificación
+
+XF86AudioLowerVolume
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && notify-send \
+    " " \
+    "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{printf "%d%%\n", int($2*100)}')"\
+    -t 1000 \
+    -u normal
+
+# Mute con notificación
+
+XF86AudioMute
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && notify-send \
+    " 󰖁 Mute" \
+    "$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)"%"}')" \
+    -t 1000 \
+    -u normal
+
+#ventanas flotantes
+super + shift + space 
+    bspc node -t '~floating'
+

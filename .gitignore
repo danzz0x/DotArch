@@ -1,0 +1,39 @@
+
+
+---
+
+
+```gitignore
+# Archivos temporales y del sistema
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Archivos de Python
+__pycache__/
+*.pyc
+
+# Archivos de backup generados por bootstrap.sh
+dotfiles_backup_*/
+
+# Historial de terminal o shell
+.zsh_history
+.bash_history
+
+# Archivos de entorno o secretos
+.env
+secrets.env
+
+# Cache de editores
+*.bak
+*.tmp
+.vscode/
+.idea/
+
+# Archivos de logs u otros generados en el sistema
+*.log
+
+# Otros repos clonados dentro por error
+*/node_modules/
+*/.venv/

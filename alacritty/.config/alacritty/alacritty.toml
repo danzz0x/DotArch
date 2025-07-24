@@ -1,0 +1,51 @@
+[window.padding]
+x = 20
+y = 20
+
+[window]
+opacity = 0.8
+
+[cursor]
+style = "Underline"
+
+[font]
+size = 9.0
+
+[font.normal]
+family="MonoLisa"
+style="Bold"
+
+[font.italic]
+family="MonoLisa"
+style="RegularItalic"
+
+[mouse]
+hide_when_typing = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#1E2127"
+red = "#FF4C4C"
+green = "#7CFC00"
+yellow = "#FFD700"
+blue = "#1E90FF"
+magenta = "#FF6FFF"
+cyan = "#00CED1"
+white = "#FFFFFF"
+
+[colors.normal]
+black = "#2E3440"
+red = "#E06C75"
+green = "#98C379"
+yellow = "#E5C07B"
+blue = "#61AFEF"
+magenta = "#C678DD"
+cyan = "#56B6C2"
+white = "#ABB2BF"
+
+[colors.primary]
+background = "#1E1E2E"
+foreground = "#F8F8F2"
+

@@ -1,0 +1,47 @@
+#! /bin/sh
+#logs
+echo "bspwmrc cargado" >>/tmp/bspwmrc.log
+# Start sxhkd
+pgrep -x sxhkd >/dev/null || sxhkd &
+
+# rotate screen
+xrandr --output HDMI-1 --mode 1360x768 --right-of eDP-1
+#xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --pos 1366x0 --scale 0.7x0.7 --right-of eDP-1
+#segun mejora el color
+xrandr --output HDMI-1 --brightness 0.70 --gamma 1.1:1.1:1.1
+# Start nitrogen to set the wallpaper on the boot
+nitrogen --restore
+#feh --bg-scale $HOME/Dotfiles/forest.jpg
+
+# start notification manager
+dunst &
+picom &
+# Disabilita lo screensaver e la gestione dell'alimentazione del display
+xset s off
+xset -dpms
+#mejorar la calidad del texto o configuracion de fuentes:
+xrdb -merge ~/.Xresources
+
+#ventanas flotantes
+#bspc rule -a '*:dialog' state=floating
+
+#"Focus Follows Mouse" (Enfocar ventana con el cursor)
+bspc config focus_follows_pointer true
+
+# kill running istances and start handle wheel
+#pkill -f handle-wheel.sh
+#$HOME/Dotfiles/Scripts/handle-wheel.sh &
+
+# launch polybar
+$HOME/.config/polybar/launch.sh
+
+# Workspaces
+#bspc wm -r
+bspc monitor eDP-1 -d '1' '2' '3' '4' '5' '6' '7'
+bspc monitor HDMI-1 -d '8' '9' '0'
+bspc config border_width 0
+bspc config window_gap 10
+
+bspc config split_ratio 0.5
+bspc config borderless_monocle true
+bspc config gapless_monocle true

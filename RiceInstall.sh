@@ -86,7 +86,9 @@ instalar_dotfiles() {
 
   # Backup de configs existentes
   for app in "${CONFIGS[@]}"; do
-    if [ -d "$CONFIG_DIR/$app" ]; then
+
+    if [ -d "$CONFIG_DIR/$app" ] && [ ! -L "$CONFIG_DIR/$app" ]; then
+
       echo -e "${YELLOW}→ $app${RESET}"
       mkdir -p "$BACKUP_DIR/.config"
       mv "$CONFIG_DIR/$app" "$BACKUP_DIR/.config/"

@@ -13,7 +13,7 @@ DOTFILES_DIR="$HOME/dotfiles"
 BACKUP_DIR="$HOME/dotfiles_backup"
 CONFIG_DIR="$HOME/.config"
 HOME_FILES=(.zshrc .p10k.zsh)
-CONFIGS=(bspwm sxhkd alacritty picom polybar dunst nvim rofi ranger obsidian fastfetch)
+CONFIGS=(bspwm sxhkd alacritty picom polybar dunst nvim rofi ranger fastfetch)
 
 # ✅ Verificar existencia del repositorio
 verificar_repositorio() {

@@ -1,6 +1,0 @@
-2025/07/23-17:21:12.855 d47f Reusing MANIFEST /home/danzo/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
-2025/07/23-17:21:12.855 d47f Recovering log #4
-2025/07/23-17:21:12.914 d47f Reusing old log /home/danzo/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000004.log 
-2025/07/23-18:46:52.926 d480 Level-0 table #8: started
-2025/07/23-18:46:52.961 d480 Level-0 table #8: 1650318 bytes OK
-2025/07/23-18:46:52.965 d480 Delete type=0 #4

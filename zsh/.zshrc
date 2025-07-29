@@ -134,3 +134,6 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+
+#laravel
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"

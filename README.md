@@ -2,6 +2,15 @@
 # 🛠️ Daniel's Dotfiles
 
 Bienvenido a mis dotfiles — una colección organizada y minimalista para configurar rápidamente mi entorno en Arch Linux con BSPWM, Zsh y herramientas ligeras.
+---
+
+![cap1](capturas/cap1.png)
+
+
+![cap2](capturas/cap2.png)
+
+
+![cap3](capturas/cap3.png)
 
 ---
 
